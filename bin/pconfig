@@ -1,0 +1,28 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use Config;
+
+# ABSTRACT: command line access to %Config
+# VERSION
+
+if(@ARGV > 0)
+{
+  foreach my $key (@ARGV)
+  {
+    next unless exists $Config{$key};
+    my $value = $Config{$key};
+    $value = '[undef]' unless defined $value;
+    print "$key=$value\n";
+  }
+}
+else
+{
+  foreach my $key (sort keys %Config)
+  {
+    my $value = $Config{$key};
+    $value = '[undef]' unless defined $value;
+    print "$key=$value\n";
+  }
+}
