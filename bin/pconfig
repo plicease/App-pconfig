@@ -5,6 +5,7 @@ use warnings;
 use Config;
 
 # ABSTRACT: command line access to %Config
+# PODNAME: pconfig
 # VERSION
 
 if(@ARGV > 0)
