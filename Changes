@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.02      2017-07-26 10:32:17 -0400
   - Migrate to EUMM
   - Add support 5.8.1
 
